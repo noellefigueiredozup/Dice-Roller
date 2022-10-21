@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		D9DBF5B42902CB8200D3F43C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5B32902CB8200D3F43C /* AppDelegate.swift */; };
 		D9DBF5B62902CB8200D3F43C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5B52902CB8200D3F43C /* SceneDelegate.swift */; };
-		D9DBF5B82902CB8200D3F43C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5B72902CB8200D3F43C /* ViewController.swift */; };
+		D9DBF5B82902CB8200D3F43C /* JogoDeDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5B72902CB8200D3F43C /* JogoDeDadosViewController.swift */; };
 		D9DBF5BB2902CB8200D3F43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DBF5B92902CB8200D3F43C /* Main.storyboard */; };
 		D9DBF5BD2902CB8300D3F43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9DBF5BC2902CB8300D3F43C /* Assets.xcassets */; };
 		D9DBF5C02902CB8300D3F43C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DBF5BE2902CB8300D3F43C /* LaunchScreen.storyboard */; };
+		D9DBF5CA2902D77B00D3F43C /* DadoNLados.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5C92902D77B00D3F43C /* DadoNLados.swift */; };
+		D9DBF5CC2902E01F00D3F43C /* JogosDeDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DBF5CB2902E01F00D3F43C /* JogosDeDados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9DBF5B02902CB8200D3F43C /* Dice Roller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Roller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DBF5B32902CB8200D3F43C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9DBF5B52902CB8200D3F43C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D9DBF5B72902CB8200D3F43C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9DBF5B72902CB8200D3F43C /* JogoDeDadosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDeDadosViewController.swift; sourceTree = "<group>"; };
 		D9DBF5BA2902CB8200D3F43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9DBF5BC2902CB8300D3F43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9DBF5BF2902CB8300D3F43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9DBF5C12902CB8300D3F43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9DBF5C92902D77B00D3F43C /* DadoNLados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadoNLados.swift; sourceTree = "<group>"; };
+		D9DBF5CB2902E01F00D3F43C /* JogosDeDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogosDeDados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +61,32 @@
 			isa = PBXGroup;
 			children = (
 				D9DBF5B32902CB8200D3F43C /* AppDelegate.swift */,
+				D9DBF5C72902D73700D3F43C /* Models */,
 				D9DBF5B52902CB8200D3F43C /* SceneDelegate.swift */,
-				D9DBF5B72902CB8200D3F43C /* ViewController.swift */,
+				D9DBF5C82902D74000D3F43C /* Scenes */,
 				D9DBF5B92902CB8200D3F43C /* Main.storyboard */,
 				D9DBF5BC2902CB8300D3F43C /* Assets.xcassets */,
 				D9DBF5BE2902CB8300D3F43C /* LaunchScreen.storyboard */,
 				D9DBF5C12902CB8300D3F43C /* Info.plist */,
 			);
 			path = "Dice Roller";
+			sourceTree = "<group>";
+		};
+		D9DBF5C72902D73700D3F43C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9DBF5C92902D77B00D3F43C /* DadoNLados.swift */,
+				D9DBF5CB2902E01F00D3F43C /* JogosDeDados.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9DBF5C82902D74000D3F43C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D9DBF5B72902CB8200D3F43C /* JogoDeDadosViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DBF5B82902CB8200D3F43C /* ViewController.swift in Sources */,
+				D9DBF5CA2902D77B00D3F43C /* DadoNLados.swift in Sources */,
+				D9DBF5CC2902E01F00D3F43C /* JogosDeDados.swift in Sources */,
+				D9DBF5B82902CB8200D3F43C /* JogoDeDadosViewController.swift in Sources */,
 				D9DBF5B42902CB8200D3F43C /* AppDelegate.swift in Sources */,
 				D9DBF5B62902CB8200D3F43C /* SceneDelegate.swift in Sources */,
 			);
