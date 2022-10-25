@@ -85,7 +85,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="scz-WH-ugn" userLabel="Label Resultado">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" text="#" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="scz-WH-ugn" userLabel="Label Resultado">
                                         <rect key="frame" x="24" y="145.66666666666669" width="342" height="528.33333333333326"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="470"/>
                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>

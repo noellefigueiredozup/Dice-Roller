@@ -29,7 +29,8 @@ class JogoDeDadosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        jogo = JogoDeMultiplosDados(numeroDeDados: Int(dadosStepper.value), dadoBase: DadoNLados(Int(ladosStepper.value)) ?? DadoNLados())
+        jogo?.mudarNumeroDeDados(novoNumero: Int(dadosStepper.value))
+        jogo?.mudarDado(novoDado: DadoNLados(Int(ladosStepper.value)) ?? DadoNLados())
         atualizaNumeroLadosLabel(ladosStepper)
         atualizaNumeroDadosLabel(dadosStepper)
     }
@@ -64,7 +65,7 @@ class JogoDeDadosViewController: UIViewController {
     }
     
     @IBAction func botaoRolarPressionado(_ sender: UIButton) {
-        jogo!.joga()
+        jogo?.joga()
     }
     
     private func converteArrayDeInteirosEmString(_ array : [Int]) -> String{

@@ -29,9 +29,14 @@ struct JogoDeMultiplosDados {
     private(set) var resultados : [Int]
     private var dados : [DadoNLados]
     
-    init(numeroDeDados: Int, dadoBase: DadoNLados) {
+    init?(numeroDeDados: Int, dadoBase: DadoNLados) {
         dados = Array(repeating: dadoBase, count: numeroDeDados)
         resultados = Array(repeating: 0, count: numeroDeDados)
+    }
+    
+    init() {
+        dados = Array(repeating: DadoNLados(), count: 1)
+        resultados = Array(repeating: 0, count: 1)
     }
     
     mutating func joga() {
@@ -42,12 +47,14 @@ struct JogoDeMultiplosDados {
     }
     
     mutating func mudarDado(novoDado: DadoNLados) {
-        self = JogoDeMultiplosDados(numeroDeDados: self.dados.count, dadoBase: novoDado)
+        self = JogoDeMultiplosDados(numeroDeDados: self.dados.count, dadoBase: novoDado) ?? JogoDeMultiplosDados()
     }
     
     mutating func mudarNumeroDeDados(novoNumero: Int) {
-        self = JogoDeMultiplosDados(numeroDeDados: novoNumero, dadoBase: self.dados.first ?? DadoNLados())
+        self = JogoDeMultiplosDados(numeroDeDados: novoNumero, dadoBase: self.dados.first ?? DadoNLados()) ?? JogoDeMultiplosDados()
     }
+    
+    
     
     
 }
