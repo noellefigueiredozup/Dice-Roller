@@ -53,8 +53,4 @@ struct JogoDeMultiplosDados {
     mutating func mudarNumeroDeDados(novoNumero: Int) {
         self = JogoDeMultiplosDados(numeroDeDados: novoNumero, dadoBase: self.dados.first ?? DadoNLados()) ?? JogoDeMultiplosDados()
     }
-    
-    
-    
-    
 }
