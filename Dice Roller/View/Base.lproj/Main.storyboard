@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,65 +20,79 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-ct-XUy" userLabel="Stack View Principal">
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc6-IL-pCa" userLabel="Stack View Opcoes">
-                                        <rect key="frame" x="24" y="16" width="342" height="129.66666666666666"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Cc6-IL-pCa" userLabel="Stack View Opcoes">
+                                        <rect key="frame" x="24" y="24" width="342" height="122"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="08J-uV-BAs" userLabel="Stack View Tipos De Dados">
-                                                <rect key="frame" x="0.0" y="0.0" width="145" height="129.66666666666666"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="08J-uV-BAs" userLabel="Stack View Numero de Lados">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="122"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4j-iq-01Y" userLabel="Label Numero Lados">
-                                                        <rect key="frame" x="30.333333333333336" y="0.0" width="84.666666666666657" height="54"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4j-iq-01Y" userLabel="Label Numero Lados">
+                                                        <rect key="frame" x="28.333333333333339" y="0.0" width="57.666666666666657" height="37"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Numero de lados">
+                                                            <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="6" minimumValue="4" maximumValue="20" stepValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="lzY-Yf-F3P" userLabel="Stepper Numero Lados">
-                                                        <rect key="frame" x="25.666666666666657" y="62" width="94" height="32"/>
+                                                        <rect key="frame" x="10" y="45" width="94" height="32"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="6"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="stepperLadosMudou:" destination="BYZ-38-t0r" eventType="valueChanged" id="FD2-tb-eom"/>
                                                         </connections>
                                                     </stepper>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6I-II-PNu" userLabel="Label Lados">
-                                                        <rect key="frame" x="41.333333333333329" y="102" width="62.666666666666671" height="27.666666666666657"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6I-II-PNu" userLabel="Label Lados">
+                                                        <rect key="frame" x="16" y="85" width="82" height="37"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <bool key="isElement" value="NO"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-lN-x57" userLabel="View Placeholder">
-                                                <rect key="frame" x="145" y="0.0" width="103" height="129.66666666666666"/>
+                                                <rect key="frame" x="114" y="44.666666666666679" width="114" height="77.333333333333314"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yAU-gb-A5o" userLabel="Stack View Numero De Dados">
-                                                <rect key="frame" x="248" y="0.0" width="94" height="129.66666666666666"/>
+                                                <rect key="frame" x="228" y="0.0" width="114" height="122"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-XQ-07o" userLabel="Label Numero Dados">
-                                                        <rect key="frame" x="4.6666666666666856" y="0.0" width="84.666666666666671" height="54"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="45"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-XQ-07o" userLabel="Label Numero Dados">
+                                                        <rect key="frame" x="28.333333333333311" y="0.0" width="57.666666666666657" height="37"/>
+                                                        <accessibility key="accessibilityConfiguration" hint="Numero de dados a serem rolados">
+                                                            <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3T3-zP-mV4" userLabel="Stepper Numero Dados">
-                                                        <rect key="frame" x="0.0" y="62" width="94" height="32"/>
+                                                        <rect key="frame" x="10" y="45" width="94" height="32"/>
                                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="6"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="stepperDadosMudou:" destination="BYZ-38-t0r" eventType="valueChanged" id="vpx-yl-xQu"/>
                                                         </connections>
                                                     </stepper>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-26-hl3" userLabel="Label Dados">
-                                                        <rect key="frame" x="14" y="102" width="66" height="27.666666666666657"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-26-hl3" userLabel="Label Dados">
+                                                        <rect key="frame" x="13.666666666666686" y="85" width="86.666666666666671" height="37"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <bool key="isElement" value="NO"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -86,19 +101,24 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="247" text="#" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="scz-WH-ugn" userLabel="Label Resultado">
-                                        <rect key="frame" x="24" y="145.66666666666669" width="342" height="528.33333333333326"/>
+                                        <rect key="frame" x="24" y="146" width="342" height="520"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Resultado dos dados rolados">
+                                            <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="470"/>
                                         <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="18" height="12"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sar-qd-aAr" userLabel="Button Rolar">
-                                        <rect key="frame" x="24" y="674" width="342" height="76"/>
+                                        <rect key="frame" x="24" y="666" width="342" height="76"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Pressione para rolar os dados." label="Rolar dados"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="76" id="H4M-xj-IsM"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="dice.fill" catalog="system" cornerStyle="capsule">
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <imageReference key="image" image="dice.fill" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                             <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
                                         </buttonConfiguration>
@@ -107,7 +127,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="24" bottom="16" trailing="24"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

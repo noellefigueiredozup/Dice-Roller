@@ -26,13 +26,15 @@ class JogoDeDadosViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         jogo?.mudarNumeroDeDados(novoNumero: Int(dadosStepper.value))
         jogo?.mudarDado(novoDado: DadoNLados(Int(ladosStepper.value)) ?? DadoNLados())
         atualizaNumeroLadosLabel(ladosStepper)
         atualizaNumeroDadosLabel(dadosStepper)
+        
+        
+        
     }
     
     @IBAction func stepperLadosMudou(_ sender: UIStepper) {
